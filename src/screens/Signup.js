@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 
 // Funtional Component
 // const SignupScreen = ()=>{
@@ -17,6 +17,10 @@ class SignupScreen extends Component {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Welcome to Signup screen</Text>
+                <Button title="To SignUp Success!" onPress={()=>{
+                    this.props.navigation.navigate('SignupSuccess', {userName:'Nat'});
+                }}></Button>
+
             </View>
         );
     }
